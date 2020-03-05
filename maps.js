@@ -3,7 +3,7 @@
 let svg = d3
   .select("#map")
   .append("svg")
-  .attr("width", 1000)
+  .attr("width", 1500)
   .attr("height", 800);
 
 let locations = svg.append("g");
@@ -20,7 +20,7 @@ function makeMap(data) {
     .center([0, 0])
     .rotate([74, 0])
     .scale(99900)
-    .translate([600, 68450]);
+    .translate([790, 68450]);
 
   let mapBackground = d3.geoPath().projection(map);
 
@@ -110,6 +110,7 @@ function makeMap(data) {
       )
       .enter()
       .append("option")
+      .attr("class", "dropdown")
       .text(function(d) {
         return d;
       })
