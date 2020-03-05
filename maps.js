@@ -1,7 +1,7 @@
 "use strict";
 
 let svg = d3
-  .select("body")
+  .select("#map")
   .append("svg")
   .attr("width", 1000)
   .attr("height", 800);
@@ -19,8 +19,8 @@ function makeMap(data) {
     .geoAlbers()
     .center([0, 0])
     .rotate([74, 0])
-    .scale(100000)
-    .translate([600, 68550]);
+    .scale(99900)
+    .translate([600, 68450]);
 
   let mapBackground = d3.geoPath().projection(map);
 
@@ -98,7 +98,7 @@ function makeMap(data) {
           });
       });
 
-    var dropDown = d3.select("body").append("select");
+    var dropDown = d3.select("#dropdown").append("select");
     var genOptions = dropDown
       .selectAll("option.state")
       .data(
