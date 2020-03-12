@@ -50,7 +50,7 @@ function makeMap(data) {
       .enter()
       .append("circle")
       .attr("fill", "#CE0000")
-      .attr("r", 2)
+      .attr("r", 2.5)
       .attr("class", "dot")
       .attr("cx", d => {
         return map([d.LONGITUDE, d.LATITUDE])[0];
